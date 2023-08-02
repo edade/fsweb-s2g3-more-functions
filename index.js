@@ -51,6 +51,11 @@ function ortalamaBul(arr1) {
     return null;
   } else {
     const average = arr1.reduce((total, sayi) => total + sayi, 0) / arr1.length;
+    /*let toplam = 0;
+    arr1.forEach((item) =>{
+      toplam += item
+    })
+    const average = toplam / arr1.length; */
     return Math.round(average);
   }
 }
@@ -80,10 +85,13 @@ console.log(ortalamaBul([]));
 */
 
 function ortalamadanBuyukleriBul(arr1, ortalamaBul) {
+  if (arr1.length == 0) {
+    return null;
+  }
   const ortalama = ortalamaBul(arr1);
 
-  const ortbuyuk = arr1.filter((arr1, i) => {
-    return arr1[i] >= ortalama;
+  const ortbuyuk = arr1.filter((sayi) => {
+    return sayi >= ortalama;
   });
   return ortbuyuk;
 
@@ -94,7 +102,7 @@ function ortalamadanBuyukleriBul(arr1, ortalamaBul) {
     }
   }*/
 }
-console.log(ortalamadanBuyukleriBul([50, -26, 153, 7]), ortalamaBul);
+console.log(ortalamadanBuyukleriBul([50, -26, 153, 7], ortalamaBul));
 
 /* !!!! Burdan aşağısını değiştirmeyin !!!! */
 function as() {
