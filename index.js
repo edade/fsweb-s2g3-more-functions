@@ -79,9 +79,22 @@ console.log(ortalamaBul([]));
   örnek output: [109, 216, 288, 143, 185, 194]
 */
 
-function ortalamadanBuyukleriBul(/* kodlar buraya */) {
-  // kodlar buraya
+function ortalamadanBuyukleriBul(arr1, ortalamaBul) {
+  const ortalama = ortalamaBul(arr1);
+
+  const ortbuyuk = arr1.filter((arr1, i) => {
+    return arr1[i] >= ortalama;
+  });
+  return ortbuyuk;
+
+  /* const sonuc = [];
+ for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] >= ortalama) {
+      ortbuyuk.push(arr1[i]);
+    }
+  }*/
 }
+console.log(ortalamadanBuyukleriBul([50, -26, 153, 7]), ortalamaBul);
 
 /* !!!! Burdan aşağısını değiştirmeyin !!!! */
 function as() {
