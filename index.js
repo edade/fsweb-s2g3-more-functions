@@ -16,9 +16,18 @@
   örnek output: ""
 */
 
-function dosyaAdiniBul(/* kodlar buraya */) {
-  // kodlar buraya
+function dosyaAdiniBul(path) {
+  if (path.includes("/")) {
+    return path.substring(path.lastIndexOf("/") + 1);
+  } else if (typeof path === "string") {
+    return path;
+  }
+  return path;
 }
+console.log(dosyaAdiniBul(""));
+console.log(dosyaAdiniBul("Beethoven_5.mp3"));
+console.log(dosyaAdiniBul("C:/Users/johnsmith/Music/Beethoven_5.mp3"));
+// console.log()
 
 /*
   GÖREV 2
